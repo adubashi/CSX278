@@ -30,5 +30,13 @@ public class ExerciseApplicationTests {
 		assertNotNull(videos);
 		assertTrue(videos.iterator().hasNext());
 	}
+	
+	@Test
+	public void getVideoReturnsVideo(){
+		Video video = new Video();
+		videoService.addVideo(video);
+		assertNotNull(videoService.getVideo(video.getId()));
+		
+	}
 
 }

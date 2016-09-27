@@ -19,13 +19,30 @@ public class VideoService {
 	
 	@RequestMapping(value="/video/{id}", method=RequestMethod.GET)
 	public Video getVideo(@PathVariable("id") Long videoId){
+		System.out.println("id:"+videoId);
 		return videos_.findOne(videoId);
 	}
 	
-	@RequestMapping(value="/video", method=RequestMethod.POST)
+	@RequestMapping(value="/video", method=RequestMethod.POST, consumes="application/json")
 	public Iterable<Video> addVideo(@RequestBody Video video){
 		videos_.save(video);
 		return videos_.findAll();
+	}
+
+	
+	@RequestMapping(value="/video", method=RequestMethod.GET)
+	public Iterable<Video> listOfVideos(){
+		return videos_.findAll();
+	}
+	
+	@RequestMapping(value="/video/{id}", method=RequestMethod.DELETE)
+	public void deleteVideo(@PathVariable("id") Long videoId){
+		videos_.delete(videoId);
+	}
+	
+	@RequestMapping(value="/video/{id}", method=RequestMethod.POST, consumes="application/json")
+	public void updateVideo(@PathVariable("id") Long videoId, @RequestBody Video video){
+		videos_.save(video);
 	}
 	
 }
