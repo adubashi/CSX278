@@ -1,0 +1,25 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "students",
+            "otherEntityName": "student",
+            "otherEntityRelationshipName": "college"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "schoolName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20160927161957",
+    "entityTableName": "school",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}

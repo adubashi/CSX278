@@ -1,0 +1,25 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "students",
+            "otherEntityName": "student",
+            "otherEntityRelationshipName": "dorm"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "dormName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20160927161958",
+    "entityTableName": "dormitory",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}

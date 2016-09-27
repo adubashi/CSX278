@@ -1,0 +1,55 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "college",
+            "otherEntityName": "school",
+            "otherEntityField": "schoolName"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "dorm",
+            "otherEntityName": "dormitory",
+            "otherEntityField": "dormName"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "preferedMethodOfContact",
+            "otherEntityName": "preferedContact",
+            "otherEntityField": "nameOfChoice"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "fullName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "emailAddress",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "phoneNumber",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "graduationDate",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "changelogDate": "20160927161955",
+    "entityTableName": "student",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}
