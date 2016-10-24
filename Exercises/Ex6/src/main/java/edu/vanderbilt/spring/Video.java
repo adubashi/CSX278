@@ -14,6 +14,11 @@ public class Video {
 	
 	private String name;
 	private Integer size;
+	@Override
+	public String toString() {
+		return "Video [id=" + id + ", name=" + name + ", size=" + size + ", genre=" + genre + ", url=" + url + "]";
+	}
+
 	public Integer getSize() {
 		return size;
 	}
